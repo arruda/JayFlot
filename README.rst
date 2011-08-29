@@ -36,7 +36,7 @@ public class MyClass {
 		
 		return Plot;
 	}
-	}
+}
 
 In the web file that's using the Flot.js:
 In the java script part:
