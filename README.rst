@@ -39,7 +39,9 @@ public class MyClass {
 }
 
 In the web file that's using the Flot.js:
+
 In the java script part:
+
 ...
 data = [];
 data = #{myBean.plotGenerated.printData};
