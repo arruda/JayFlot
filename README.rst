@@ -43,11 +43,19 @@ In the web file that's using the Flot.js:
 In the java script part:
 
 ...
+
 data = [];
+
 data = #{myBean.plotGenerated.printData};
+
 ...
-options = {}
+
+options = {};
+
 options = #{myBean.plotGenerated.printOptions};
+
 ....
+
 $j.plot($j("#placeholder"), data, options);
+
 ...
