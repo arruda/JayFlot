@@ -59,3 +59,10 @@ options = #{myBean.plotGenerated.printOptions};
 $j.plot($j("#placeholder"), data, options);
 
 ...
+
+
+Requirements:
+-----------------------------------
+This library uses GSon from google, version 1.7.1 to work.
+If you want to compile this library, you should put Gson in the external libraries of your project.
+If you just want to use this, then don't forget to put Gson in the same project that you're using this.

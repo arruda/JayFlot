@@ -34,7 +34,7 @@ public class Plot {
 	}
 
 	/**
-	 * Retorna uma string que representa os dados do em JSON.
+	 * Return a string that represents the data in JSON format.
 	 * @return
 	 */
 	public String printData(){
@@ -51,9 +51,20 @@ public class Plot {
 		
 		return json;
 	}
+	/**
+	 * Return a string that represents the data in JSON format.
+	 * 
+	 * Only used for bean purposes(calls printData() and return it results)
+	 * @return
+	 */
+	public String getPrintData(){
+		
+		return printData();
+	}
 
 	/**
-	 * Retorna uma string que representa as opcoes do em JSON.
+	 * Return a string that represents the options in JSON format.
+	 * 
 	 * @return
 	 */
 	public String printOptions(){
@@ -69,6 +80,17 @@ public class Plot {
 		
 		
 		return json;
+	}
+
+	/**
+	 * Return a string that represents the options in JSON format.
+	 * 
+	 * Only used for bean purposes(calls printOptions() and return it results)
+	 * @return
+	 */
+	public String getPrintOptions(){
+		
+		return printOptions();
 	}
 
 	/**
