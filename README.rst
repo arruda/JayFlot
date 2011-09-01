@@ -52,6 +52,7 @@ In the web file that's using the Flot.js, in the java script part::
 
 You can create your own JSF tag to optimize this, or use this one that I created:
 JayFlotCheckBoxTagJSF_
+
 License:
 -----------------------------------
 This software is distributed using MIT license, see LICENSE file for more details.
