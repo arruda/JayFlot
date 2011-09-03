@@ -7,17 +7,20 @@ import java.util.ArrayList;
 import br.blog.arruda.plot.data.PlotData;
 import br.blog.arruda.plot.opt.PlotAxis;
 import br.blog.arruda.plot.opt.PlotOptions;
+import br.blog.arruda.plot.opt.tipo.PlotBars;
+import br.blog.arruda.plot.opt.tipo.PlotLines;
+import br.blog.arruda.plot.opt.tipo.PlotPoints;
 
 import com.google.gson.Gson;
 
 
 
 /**
- * Representa um grafico, com suas informacoes pertinentes.
- *  Utilizado para trabalhar com o formato correto do Flot
- *  Usando o GSon para fazer conversao numa string(dict de Json) compativel com a biblioteca grafica JS.
+ * Represents a Plot, with all pertinents informations.
+ * Used to easily integrate Flot with your project, since it converts all
+ * the information to a JSON dict(using GSon lib).
  * 
- * @author Felipe
+ * @author Felipe Arruda Pontes
  *
  */
 public class Plot {
@@ -133,6 +136,60 @@ public class Plot {
 		plotData.setData(datas);
 		
 		return plotData;
+	}
+
+	/**
+	 * Generates a PlotData with Lines  using the two arrays passed for x , y axis and steps.
+	 * 
+	 * @param xAxis
+	 * @param yAxis
+	 * @param steps
+	 * @return
+	 */
+	public PlotData generatePlotDataLines(ArrayList<Double> xAxis, ArrayList<Double> yAxis,boolean steps){
+
+		PlotData data = Plot.generatePlotData(xAxis,yAxis);
+		PlotLines lines = new PlotLines();
+		lines.setSteps(steps);
+		data.setLines(lines);
+		
+		return data;
+	}
+
+	/**
+	 * Generates a PlotData with Points using the two arrays passed for x , y axis and radius.
+	 * 
+	 * @param xAxis
+	 * @param yAxis
+	 * @param radius
+	 * @return
+	 */
+	public PlotData generatePlotDataPoints(ArrayList<Double> xAxis, ArrayList<Double> yAxis,Double radius){
+
+		PlotData data = Plot.generatePlotData(xAxis,yAxis);
+		PlotPoints points = new PlotPoints();
+		points.setRadius(radius);
+		data.setPoints(points);
+		
+		return data;
+	}
+	
+	/**
+	 * Generates a PlotData with Bars using the two arrays passed for x , y axis and barwidth.
+	 * 
+	 * @param xAxis
+	 * @param yAxis
+	 * @param barwidth
+	 * @return
+	 */
+	public PlotData generatePlotDataBars(ArrayList<Double> xAxis, ArrayList<Double> yAxis,Double barwidth){
+
+		PlotData data = Plot.generatePlotData(xAxis,yAxis);
+		PlotBars bars = new PlotBars();
+		bars.setBarWidth(barwidth);
+		data.setBars(bars);
+		
+		return data;
 	}
 
 

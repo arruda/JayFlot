@@ -5,7 +5,7 @@ package br.blog.arruda.plot.opt.tipo;
  * Classe utilizada para gerar os dados nas tags de grafico.
  * 
  * 
- * @author Felipe
+ *@author Felipe Arruda Pontes
  *
  */
 public class PlotPoints extends PlotType {

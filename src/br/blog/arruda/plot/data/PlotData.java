@@ -12,7 +12,7 @@ import br.blog.arruda.plot.opt.tipo.PlotPoints;
  * Classe utilizada para gerar os dados nas tags de grafico.
  * 
  * 
- * @author Felipe
+ * @author Felipe Arruda Pontes
  *
  */
 public class PlotData {
