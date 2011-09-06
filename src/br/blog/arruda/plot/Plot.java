@@ -146,7 +146,7 @@ public class Plot {
 	 * @param steps
 	 * @return
 	 */
-	public PlotData generatePlotDataLines(ArrayList<Double> xAxis, ArrayList<Double> yAxis,boolean steps){
+	public static PlotData generatePlotDataLines(ArrayList<Double> xAxis, ArrayList<Double> yAxis,boolean steps){
 
 		PlotData data = Plot.generatePlotData(xAxis,yAxis);
 		PlotLines lines = new PlotLines();
@@ -164,7 +164,7 @@ public class Plot {
 	 * @param radius
 	 * @return
 	 */
-	public PlotData generatePlotDataPoints(ArrayList<Double> xAxis, ArrayList<Double> yAxis,Double radius){
+	public static PlotData generatePlotDataPoints(ArrayList<Double> xAxis, ArrayList<Double> yAxis,Double radius){
 
 		PlotData data = Plot.generatePlotData(xAxis,yAxis);
 		PlotPoints points = new PlotPoints();
@@ -182,7 +182,7 @@ public class Plot {
 	 * @param barwidth
 	 * @return
 	 */
-	public PlotData generatePlotDataBars(ArrayList<Double> xAxis, ArrayList<Double> yAxis,Double barwidth){
+	public static PlotData generatePlotDataBars(ArrayList<Double> xAxis, ArrayList<Double> yAxis,Double barwidth){
 
 		PlotData data = Plot.generatePlotData(xAxis,yAxis);
 		PlotBars bars = new PlotBars();
