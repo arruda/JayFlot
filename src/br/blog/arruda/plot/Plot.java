@@ -51,6 +51,8 @@ public class Plot {
 			String temp = gson.toJson(data,data.getClass());
 			json+=temp+",";
 		}
+		//remove last ','
+		json= json.substring(0, json.length()-1);
 		json+="]";
 		
 		return json;
@@ -96,6 +98,27 @@ public class Plot {
 	public String getPrintOptions(){
 		
 		return printOptions();
+	}
+
+	/**
+	 * Return a dictionary with datas and options in JSON format.
+	 * 
+	 * @return
+	 */
+	public String printAll(){
+		String jsonDatas = this.printData();
+		String jsonOptions = this.printOptions();
+                return "{\"datas\": " + jsonDatas + ", \"options\" : " + jsonOptions + "}";
+	}
+
+	/**
+	 * Return a dictionary with datas and options in JSON format.
+	 * Only used for bean purposes(calls printAll() and return it results)
+	 * @return
+	 */
+	public String getPrintAll(){
+		
+                return printAll();
 	}
 
 	/**
